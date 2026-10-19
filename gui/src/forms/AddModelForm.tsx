@@ -89,7 +89,6 @@ export function AddModelForm({ onDone }: AddModelFormProps) {
   ];
 
   const allProviders = Object.entries(providers)
-    .filter(([key]) => !["openai-aiohttp"].includes(key))
     .map(([, provider]) => provider)
     .filter((provider) => !!provider)
     .map((provider) => provider!); // for type checking
